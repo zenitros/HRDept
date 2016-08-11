@@ -42,6 +42,7 @@ namespace HRDept.Data.Impl
                 sqlConn.Open();
                 using (var cmd = new SqlCommand())
                 {
+                    cmd.Connection = sqlConn;
                     cmd.Parameters.AddWithValue("@Name", data.Name);
                     cmd.Parameters.AddWithValue("@Id", data.EntityBaseId);
 
@@ -135,6 +136,7 @@ namespace HRDept.Data.Impl
 
         public Vacancy GetVacancy()
         {
+            Vacancy vacancy = null;
             using (SqlConnection sqlConn = new SqlConnection(_connString))
             {
                 sqlConn.Open();
@@ -145,6 +147,7 @@ namespace HRDept.Data.Impl
 
                 }
             }
+            return vacancy;
         }
     }
 }

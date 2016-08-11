@@ -48,11 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IRepo.cs" />
-    <Compile Include="HRDeptContext.cs" />
     <Compile Include="Impl\MsSqlRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlQueries.cs" />
-    <Compile Include="TestDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

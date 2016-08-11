@@ -4,9 +4,9 @@
     {
         public static string AddEmployee = @"";
 
-        public static string AddDepartment = @"";
+        public static string AddDepartment = @"insert into department (id,lead_id, name) values (@Id,1,@Name)";
 
-        public static string AddBaseDepartment = @"";
+        public static string AddBaseDepartment = @"insert into department (id,lead_id, name) values (@Id,1,@Name)";
 
         public static string AddVacancy = @"";
 
