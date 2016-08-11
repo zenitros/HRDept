@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using HRDept.Data.Contracts;
 using HRDept.Model.Entity;
@@ -45,6 +46,7 @@ namespace HRDept.Data.Impl
                     cmd.Connection = sqlConn;
                     cmd.Parameters.AddWithValue("@Name", data.Name);
                     cmd.Parameters.AddWithValue("@Id", data.EntityBaseId);
+                    cmd.Parameters.AddWithValue("@Lead_id", Guid.NewGuid());
 
                     if (data.ParentId != null)
                     {

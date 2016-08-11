@@ -1,4 +1,6 @@
-﻿namespace HRDept.Data
+﻿using System;
+
+namespace HRDept.Data
 {
     public class SqlQueries
     {
@@ -6,7 +8,8 @@
 
         public static string AddDepartment = @"insert into department (id,lead_id, name) values (@Id,1,@Name)";
 
-        public static string AddBaseDepartment = @"insert into department (id,lead_id, name) values (@Id,1,@Name)";
+        public static string AddBaseDepartment =
+            @"insert into department (id,lead_id, name) values (@Id,@Lead_id,@Name)";
 
         public static string AddVacancy = @"";
 
