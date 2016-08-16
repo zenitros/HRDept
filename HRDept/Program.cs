@@ -1,6 +1,6 @@
 ﻿using System;
-using HRDept.Data.Impl;
-using HRDept.Model.Entity;
+using HRDept.Data.DTO;
+using HRDept.Inf.MsSqlImpl;
 
 namespace HRDept
 {
@@ -8,7 +8,7 @@ namespace HRDept
     {
         static void Main(string[] args)
         {
-            Department dept = new Department();
+            DepartmentDTO dept = new DepartmentDTO();
             dept.EntityBaseId = Guid.NewGuid();
             dept.Name = "Head";
             new MsSqlRepo().AddDepartment(dept);

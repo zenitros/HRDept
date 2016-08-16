@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MsSqlImpl\MsSqlRepo.cs" />
+    <Compile Include="MsSqlImpl\SqlQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HRDept.Data\HRDept.Data.csproj">
+      <Project>{236874C2-1C6F-4EF4-9734-02003F9060A1}</Project>
+      <Name>HRDept.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRDept.Model\HRDept.Model.csproj">
+      <Project>{E7E68157-5466-49ED-86AE-E8A21ECBBF9E}</Project>
+      <Name>HRDept.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
